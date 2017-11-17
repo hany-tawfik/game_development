@@ -22,19 +22,40 @@ public class plane : MonoBehaviour { //the class plane inherites class monobehav
     dict.Add("F4", 77);
     
     //Lines and spaces coordinates
+    float E3_x;
+    float E3_y;
+    float E3_z;
     
-    E3
     
     // Use this for initialization
     void Start () {
-              source = GetComponent<AudioSource>();
+      source = GetComponent<AudioSource>();
       }
     
     
-    // Repositioning
-	  void new_position () {
+    // Plane Repositioning
+    void update_plane_position () {
             transform.position = new Vector3(-1.47f, 0.582f, 1.14f);
     }
+    
+    //Update staff position
+    void Update_staff_position (float E3_x, float E3_y, float E3_z) {
+    	List<float> E3_xyz = new List<float> ();
+		E3_xyz.Add (E3_x);
+		E3_xyz.Add (E3_y);
+		E3_xyz.Add (E3_z);
+
+	List<float> F3_xyz = new List<float> ();
+		F3_xyz.Add (E3_xyz [0] + 1.0f);
+		F3_xyz.Add (E3_y);
+		F3_xyz.Add (E3_z);
+
+	List<float> G3_xyz = new List<float> ();
+		G3_xyz.Add (E3_xyz [0] + 2.0f);
+		G3_xyz.Add (E3_xyz [1]);
+		G3_xyz.Add (E3_xyz [2]);
+    
+    
 
     
     
