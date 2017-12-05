@@ -19,6 +19,8 @@ public class plane : MonoBehaviour {
     int D4 = 74;
     int E4 = 76;
     int F4 = 77;
+    int key_number;
+    
 
 
 
@@ -38,6 +40,12 @@ public class plane : MonoBehaviour {
     void Update()
     {
         //yourobject.transform.Translate(MovementVector, Space.Self);
+	    
+	/*if (MidiMaster.GetKeyDown(key_number >= 1 && key_number <= 100))
+        {
+            transform.position = new Vector3(-1.47f, 0.582f, 1.14f);
+            OD3.SetActive(true);
+            source.PlayOneShot(key_number, 1.0f);*/
 
         // Lines E G B D F A
         if (MidiMaster.GetKeyDown(D3))
